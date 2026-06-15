@@ -1,70 +1,249 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Commercial Building Energy Analysis</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Commercial Building Energy Analysis</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f4f6f8;
+      color: #1f2933;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #0f172a;
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.3rem;
+    }
+
+    header p {
+      margin-top: 15px;
+      font-size: 1.1rem;
+      color: #cbd5e1;
+    }
+
+    .container {
+      max-width: 1050px;
+      margin: auto;
+      padding: 35px 20px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 28px;
+      margin-bottom: 28px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+    }
+
+    h2 {
+      margin-top: 0;
+      color: #0f172a;
+    }
+
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 18px;
+      margin-top: 20px;
+    }
+
+    .metric {
+      background: #e8f0fe;
+      padding: 18px;
+      border-radius: 10px;
+      border-left: 5px solid #2563eb;
+    }
+
+    .metric strong {
+      display: block;
+      font-size: 1.5rem;
+      color: #0f172a;
+    }
+
+    .buttons {
+      margin-top: 20px;
+    }
+
+    .button {
+      display: inline-block;
+      margin: 8px 8px 8px 0;
+      padding: 12px 18px;
+      background: #2563eb;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+
+    .button.secondary {
+      background: #334155;
+    }
+
+    img {
+      max-width: 100%;
+      border-radius: 10px;
+      border: 1px solid #ddd;
+      margin-top: 15px;
+    }
+
+    ul {
+      padding-left: 22px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      background: #0f172a;
+      color: #cbd5e1;
+      margin-top: 40px;
+    }
+
+    .tag {
+      display: inline-block;
+      background: #e2e8f0;
+      color: #1e293b;
+      padding: 8px 12px;
+      border-radius: 999px;
+      margin: 5px;
+      font-size: 0.9rem;
+    }
+  </style>
 </head>
+
 <body>
-    <h1>Small Commercial Building Energy Load Analysis and Solar Feasibility Study</h1>
 
-    <p>
-        This project analyses a simulated 30-day electricity demand profile for a small commercial building
-        and evaluates the impact of a 30 kW rooftop solar PV scenario.
-    </p>
+  <header>
+    <h1>Small Commercial Building Energy Analysis</h1>
+    <p>30-day load profile analysis with a simulated 30 kW rooftop solar PV scenario</p>
+    <p>Prepared by Rohan Ramjutton | Bachelor of Electrical Engineering (Honours), RMIT University</p>
+  </header>
 
-    <h2>Project Overview</h2>
-    <p>
-        An Excel-based dashboard was developed to calculate total energy use, peak demand, estimated
-        electricity cost, emissions, overnight base load, solar self-consumption, exported solar energy,
-        grid import after solar and simple payback.
-    </p>
+  <main class="container">
 
-    <h2>Key Results</h2>
-    <ul>
-        <li>Total energy used before solar: 8130 kWh</li>
-        <li>Peak demand: 34.90 kW</li>
-        <li>Grid import after solar: 2549 kWh</li>
-        <li>Solar self-consumption ratio: 81.29%</li>
-        <li>Estimated monthly solar benefit: $1626.99</li>
-        <li>Simple payback: 1.84 years</li>
-    </ul>
+    <section class="card">
+      <h2>Project Overview</h2>
+      <p>
+        This project analyses the electricity usage of a simulated small commercial building over a 30-day period.
+        An Excel-based dashboard was developed to calculate total energy use, peak demand, estimated electricity
+        cost, emissions, overnight base load, solar self-consumption, exported solar energy, grid import after solar
+        and simple payback.
+      </p>
+      <p>
+        The aim was to understand how building load data can be used to assess energy behaviour and support
+        early-stage rooftop solar PV feasibility decisions.
+      </p>
 
-    <h2>Dashboard Preview</h2>
-    <img src="Github_Project_Upload/dashboard_screenshot.png" alt="Dashboard screenshot" width="900">
+      <div class="buttons">
+        <a class="button" href="Github_Project_Upload/Small Commercial Building Energy Load Analysis and Solar Feasibility Study.pdf">Download Report</a>
+        <a class="button secondary" href="Github_Project_Upload/Building_Energy_Analysis.xlsx">Download Excel Workbook</a>
+      </div>
+    </section>
 
-    <h2>Project Report</h2>
-    <p>
-        <a href="Github_Project_Upload/Small Commercial Building Energy Load Analysis and Solar Feasibility Study.pdf">
-            Download Full Report
-        </a>
-    </p>
+    <section class="card">
+      <h2>Key Results</h2>
 
-    <h2>Excel Workbook</h2>
-    <p>
-        <a href="Github_Project_Upload/Building_Energy_Analysis.xlsx">
-            Download Excel Workbook
-        </a>
-    </p>
+      <div class="metrics">
+        <div class="metric">
+          <span>Total energy before solar</span>
+          <strong>8130 kWh</strong>
+        </div>
 
-    <h2>Skills Demonstrated</h2>
-    <ul>
-        <li>Electrical energy analysis</li>
-        <li>Excel dashboard development</li>
-        <li>Load profile analysis</li>
-        <li>Solar PV feasibility assessment</li>
-        <li>Cost and emissions estimation</li>
-        <li>Technical report writing</li>
-    </ul>
+        <div class="metric">
+          <span>Peak demand</span>
+          <strong>34.90 kW</strong>
+        </div>
 
-    <h2>Assumptions</h2>
-    <p>
-        The load data is simulated for a small commercial building. Solar generation is modelled using a
-        simplified daytime generation curve. Tariffs, emissions factor and solar system cost are assumed
-        for concept-level analysis.
-    </p>
+        <div class="metric">
+          <span>Grid import after solar</span>
+          <strong>2549 kWh</strong>
+        </div>
 
-    <p>
-        Author: Rohan Ramjutton<br>
-        Bachelor of Electrical Engineering (Honours), RMIT University
-    </p>
+        <div class="metric">
+          <span>Solar self-consumption</span>
+          <strong>81.29%</strong>
+        </div>
+
+        <div class="metric">
+          <span>Monthly solar benefit</span>
+          <strong>$1626.99</strong>
+        </div>
+
+        <div class="metric">
+          <span>Simple payback</span>
+          <strong>1.84 years</strong>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Dashboard Preview</h2>
+      <p>
+        The dashboard summarises the building's 30-day energy profile and compares the original grid demand
+        with a simulated 30 kW rooftop solar PV scenario.
+      </p>
+      <img src="Github_Project_Upload/dashboard_screenshot.png" alt="Excel dashboard screenshot">
+    </section>
+
+    <section class="card">
+      <h2>Methodology</h2>
+      <p>
+        The project used half-hourly demand data over a 30-day period. Energy use was calculated using:
+      </p>
+      <p><strong>Energy (kWh) = Demand (kW) × Time (h)</strong></p>
+      <p>
+        Since each interval was 30 minutes, each demand reading was multiplied by 0.5 hours.
+        A simplified 30 kW solar generation profile was then modelled and compared with building demand.
+      </p>
+
+      <ul>
+        <li>Daily energy was calculated from half-hourly kWh values.</li>
+        <li>Peak demand was calculated from the maximum kW value each day.</li>
+        <li>Grid import after solar was calculated from remaining demand not supplied by solar.</li>
+        <li>Exported solar was calculated when solar generation exceeded building demand.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Skills Demonstrated</h2>
+      <div>
+        <span class="tag">Electrical energy analysis</span>
+        <span class="tag">Excel dashboard development</span>
+        <span class="tag">Load profile analysis</span>
+        <span class="tag">Solar PV feasibility</span>
+        <span class="tag">Cost estimation</span>
+        <span class="tag">Emissions estimation</span>
+        <span class="tag">Technical report writing</span>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Assumptions and Limitations</h2>
+      <ul>
+        <li>The load data is simulated for a small commercial building.</li>
+        <li>Electricity demand is recorded in 30-minute intervals.</li>
+        <li>The 30 kW rooftop solar PV system is modelled using a simplified daytime generation curve.</li>
+        <li>Tariffs, demand charges, emissions factor and solar system cost are assumed for concept-level analysis.</li>
+        <li>The analysis does not include detailed electrical design, inverter losses, shading, weather variation, protection design, grid connection approval or roof structural assessment.</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Created by Rohan Ramjutton</p>
+    <p>Bachelor of Electrical Engineering (Honours), RMIT University</p>
+  </footer>
+
 </body>
 </html>
