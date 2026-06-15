@@ -13,10 +13,11 @@ The dashboard uses half-hourly simulated load data over a 30-day period. A simpl
 ## Key Results
 
 | Metric | Result |
+|---|---:|
 | Total energy used before solar | 8130 kWh |
 | Peak demand | 34.90 kW |
 | Estimated bill before solar | $2731.20 |
-| Estimated emissions | 5691 kg CO2 |
+| Estimated emissions | 5691 kg CO₂ |
 | Overnight base load | 2.39 kW |
 | Solar PV size modelled | 30 kW |
 | Grid import after solar | 2549 kWh |
