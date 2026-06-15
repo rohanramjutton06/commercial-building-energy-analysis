@@ -1,3 +1,10 @@
+## View the Report
+
+If the PDF preview does not load on mobile, download the report file directly from the project files.
+
+Report file: `Github_Project_Upload/Building_Energy_Analysis.pdf`
+
+
 # Small Commercial Building Energy Load Analysis and Solar Feasibility Study
 
 This project analyses a simulated 30-day electricity demand profile for a small commercial building and assesses the impact of a 30 kW rooftop solar PV scenario.
