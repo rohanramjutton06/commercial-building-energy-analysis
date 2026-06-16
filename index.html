@@ -126,7 +126,7 @@
   <header>
     <h1>Small Commercial Building Energy Analysis</h1>
     <p>30-day load profile analysis with a simulated 30 kW rooftop solar PV scenario</p>
-    <p>Prepared by Rohan Ramjutton 
+    <p>Prepared by Rohan Ramjutton</p>
   </header>
 
   <main class="container">
@@ -196,23 +196,89 @@
     </section>
 
     <section class="card">
-      <h2>Methodology</h2>
-      <p>
-        The project used half-hourly demand data over a 30-day period. Energy use was calculated using:
-      </p>
-      <p><strong>Energy (kWh) = Demand (kW) × Time (h)</strong></p>
-      <p>
-        Since each interval was 30 minutes, each demand reading was multiplied by 0.5 hours.
-        A simplified 30 kW solar generation profile was then modelled and compared with building demand.
-      </p>
+      <section class="card">
+  <h2>Methodology</h2>
 
-      <ul>
-        <li>Daily energy was calculated from half-hourly kWh values.</li>
-        <li>Peak demand was calculated from the maximum kW value each day.</li>
-        <li>Grid import after solar was calculated from remaining demand not supplied by solar.</li>
-        <li>Exported solar was calculated when solar generation exceeded building demand.</li>
-      </ul>
-    </section>
+  <p>
+    The analysis was completed using a 30-day half-hourly electricity demand dataset for a simulated small
+    commercial building. The dataset was processed in Excel to convert demand readings into interval energy
+    use, identify daily load behaviour, estimate grid electricity costs and compare the original demand profile
+    with a simplified rooftop solar PV scenario.
+  </p>
+
+  <h3>1. Load Data Processing</h3>
+  <p>
+    Each electricity demand reading was provided in kilowatts (kW) at 30-minute intervals. To calculate energy
+    use for each interval, the demand value was multiplied by the interval duration of 0.5 hours:
+  </p>
+
+  <p><strong>Energy (kWh) = Demand (kW) × 0.5 h</strong></p>
+
+  <p>
+    The half-hourly energy values were then summed to calculate the total 30-day energy consumption and daily
+    energy usage. Peak demand was identified by finding the maximum demand value recorded during the analysis
+    period.
+  </p>
+
+  <h3>2. Base Load and Daily Profile Analysis</h3>
+  <p>
+    The building load profile was reviewed to identify how demand changed throughout the day. Overnight demand
+    was used to estimate the building's base load, representing electricity consumption that remains present
+    outside normal operating hours. This helped separate constant background demand from daytime operational
+    demand.
+  </p>
+
+  <h3>3. Solar PV Scenario Modelling</h3>
+  <p>
+    A simplified 30 kW rooftop solar PV generation profile was modelled to represent typical daytime solar
+    production. The solar generation profile was compared against the building demand at each half-hourly
+    interval to determine how much solar energy could be used directly by the building.
+  </p>
+
+  <p>
+    For each interval, the available solar generation was split into two outcomes:
+  </p>
+
+  <ul>
+    <li><strong>Solar self-consumption:</strong> solar energy used directly by the building.</li>
+    <li><strong>Exported solar energy:</strong> surplus solar generation exported when solar production exceeded building demand.</li>
+  </ul>
+
+  <h3>4. Grid Import and Export Calculation</h3>
+  <p>
+    Grid import after solar was calculated by subtracting usable solar generation from the building demand at
+    each interval. When building demand was greater than solar generation, the remaining demand was supplied
+    by the grid. When solar generation exceeded demand, the excess was recorded as exported energy.
+  </p>
+
+  <ul>
+    <li><strong>Grid import after solar:</strong> building demand not supplied by solar PV.</li>
+    <li><strong>Exported solar:</strong> solar generation remaining after building demand was met.</li>
+    <li><strong>Solar self-consumption percentage:</strong> solar used on-site divided by total solar generation.</li>
+  </ul>
+
+  <h3>5. Cost, Emissions and Payback Estimation</h3>
+  <p>
+    Electricity cost was estimated by applying an assumed grid electricity tariff to imported energy. Solar
+    savings were estimated based on the reduction in grid-imported electricity after the 30 kW solar PV system
+    was applied. An emissions factor was also used to estimate the reduction in grid-related carbon emissions.
+  </p>
+
+  <p>
+    A simple payback period was calculated by comparing the assumed installed cost of the solar PV system
+    against the estimated financial benefit from reduced grid electricity consumption.
+  </p>
+
+  <p><strong>Simple Payback = Estimated Solar System Cost ÷ Estimated Annual Solar Benefit</strong></p>
+
+  <h3>6. Dashboard Development</h3>
+  <p>
+    The final Excel dashboard was built to summarise the key technical and financial outputs of the analysis.
+    It includes total energy consumption, peak demand, grid import after solar, exported energy, solar
+    self-consumption, estimated cost reduction, emissions reduction and simple payback. The dashboard was
+    designed to present the results in a clear format suitable for early-stage energy feasibility assessment.
+  </p>
+</section>
 
     <section class="card">
       <h2>Skills Demonstrated</h2>
